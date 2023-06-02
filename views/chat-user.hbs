@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+<body>
+        <header class="container-fluid" id="header">
+        <nav id="navbar">
+            <div class="container-fluid">
+
+                <ul style="display:flex; flex-direction:row; justify-content:space-around;">
+                    <li class="btn-navbar" style="text-decoration:none; list-style-type:none;">
+                        <a class="link-navbar" href="/api/admin"
+                            style="text-decoration:none; list-style-type:none; color:rgb(61, 12, 140); font-size:1.5rem;">Administración</a>
+                    </li>
+                    <li class="btn-navbar" style="text-decoration:none; list-style-type:none;">
+                        <a class="link-navbar" href="/api/usuarios/login"
+                            style="text-decoration:none; list-style-type:none; color:rgb(61, 12, 140); font-size:1.5rem;">Mi
+                            Perfil</a>
+                    </li>
+
+                    <li class="btn-navbar" style="text-decoration:none; list-style-type:none;">
+                        <button
+                            style="text-decoration:none; list-style-type:none; color:rgb(61, 12, 140); font-size:1.2rem; background-color:white; border-width:0;">
+                            <a class="link-navbar"
+                                style="text-decoration:none; list-style-type:none; color:rgb(61, 12, 140);"
+                                href="/chat">Chat</a></button>
+                    </li>
+
+                    <li class="btn-navbar" style="text-decoration:none; list-style-type:none;">
+                        <button
+                            style="text-decoration:none; list-style-type:none; color:rgb(61, 12, 140); font-size:1.2rem; background-color:white; border-width:0;">
+                            <a class="link-navbar"
+                                style="text-decoration:none; list-style-type:none; color:rgb(61, 12, 140);"
+                                href="/logout">Cerrar sesión</a></button>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <div style="border-color:grey; border-width:5px; width:70%; background-color:rgb(226, 225, 225); padding:10px;">
+        <h2 style="color:blue; font-weight:bold; margin-left: 40px;">Centro de Mensajes</h2>
+        <h2 style="color:blue; font-weight:bold; margin-left: 40px;">{{username}}</h2>        
+        <div class="chat-message clearfix">
+            <form onsubmit="return verMensajesUser(this)">
+                <input name="username" id="username" value="{{username}}" type="hidden">
+                <button id="ver-mensajes-user" id="" type="submit" class="link-navbar" style="text-decoration:none; list-style-type:none; color:rgb(61, 12, 140); font-size:1.2rem; background-color:white; border-width:0;">Ver sólo mis mensajes</button>
+                <div>                
+                    <ul id="chat-user">
+                    </ul>                
+                </div>
+            </form>
+        </div>       
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../index.js"></script>
+</body>
+
+</html>
