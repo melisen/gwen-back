@@ -12,6 +12,11 @@ const allProductsGwen = async () => {
   return products;
 };
 
+const saveProdGwen = async (objProd) => {
+  const guardar = await saveNewProd(objProd);
+};
+
 module.exports = {
   allProductsGwen,
+  saveProdGwen,
 };
