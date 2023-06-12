@@ -5,9 +5,11 @@ mongoose.set("strictQuery", false);
 
 const ProductoSchema = new mongoose.Schema({
   title: { type: String, required: true, max: 100 },
-  price: { type: String, required: true, max: 100 },
-  thumbnail: { type: String, required: true, max: 10000 },
   category: { type: String, required: true, max: 100 },
+  price: { type: Number, required: true },
+  thumbnail: { type: String, required: true },
+  description: { type: String, required: true },
+  stock: { type: Number, required: true },
 });
 
 const ProdModel = mongoose.model("productos", ProductoSchema);
@@ -22,9 +24,11 @@ class MongoDAOproductos {
     const todosProd = productos.map((item) => ({
       _id: item._id,
       title: item.title,
+      category: item.category,
       price: item.price,
       thumbnail: item.thumbnail,
-      category: item.category,
+      description: item.description,
+      stock: item.stock,
     }));
     return todosProd;
   }
@@ -42,10 +46,13 @@ class MongoDAOproductos {
   }
   async saveNew(objProd) {
     const nuevoProd = new this.modeloProd({
+      _id: objProd._id,
       title: objProd.title,
+      category: objProd.category,
       price: objProd.price,
       thumbnail: objProd.thumbnail,
-      category: objProd.category,
+      description: objProd.description,
+      stock: objProd.stock,
     });
     const prodGuardado = await nuevoProd.save();
     logger.log("info", "nuevo producto guardado");
@@ -55,10 +62,12 @@ class MongoDAOproductos {
     const modificarProdDB = this.modeloProd.findOneAndUpdate(
       { _id: obj.idprod },
       {
-        title: obj.newTitle,
-        price: obj.newPrice,
-        thumbnail: obj.newThumbnail,
-        category: obj.newCategory,
+        title: obj.title,
+        category: obj.category,
+        price: obj.price,
+        thumbnail: obj.thumbnail,
+        description: obj.description,
+        stock: obj.stock,
       }
     );
     return modificarProdDB;

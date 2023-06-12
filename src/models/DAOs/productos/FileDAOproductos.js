@@ -41,6 +41,7 @@ class FileDAOproductos {
         return [];
       } else {
         const res = await JSON.parse(objetos);
+        console.log("objetos", objetos[0]);
         return res;
       }
     } catch (err) {

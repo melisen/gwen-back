@@ -1,16 +1,47 @@
 [
   {
-    "category": "multicolor",
-    "title": "Tickeer",
-    "price": "10000",
-    "thumbnail": "https://falabella.scene7.com/is/image/Falabella/50111813_1?wid=800&hei=800&qlt=70",
-    "_id": 3
+    "_id": "1",
+    "category": "chops",
+    "title": "Chop de Algarrobo, Vaso De Acero Inoxidable",
+    "price": 2800,
+    "description": "500 mL. Altura: 17 cm. Diámetro de la boca: 10 cm. Material: Madera",
+    "stock": 1,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_664138-MLA53229849559_012023-F.webp"
   },
   {
     "_id": "2",
-    "title": "Mini Kids",
-    "price": "9000",
-    "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ1IwafZwMMtTxHLHcyxHT9Yo4Ht-tX6ppD7sbmKe54_rNY6x3tgLEvw1JGp4dKz_GYJmSDrNjSjBdVM7R7LO-i7IAJI37sCYKT0GE-JIGl9SEIlY4J8s6DRkai6k2oJbazGA&usqp=CAc",
-    "category": "blanco"
+    "category": "chops",
+    "title": "Chop Cervecero Algarrobo, Vaso de Aluminio",
+    "price": 3700,
+    "description": "500 mL. Altura: 15 cm. Diámetro de la boca: 9 cm. Material: Algarrobo",
+    "stock": 1,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_866248-MLA54339722273_032023-F.webp"
+  },
+  {
+    "_id": "3",
+    "category": "indumentaria",
+    "title": "Vestido renacentista celeste",
+    "price": 10500,
+    "description": "Disfraz renacentista de Lehauya para mujer, vestido medieval irlandés y mangas de trompeta, conjunto bohemio",
+    "stock": 2,
+    "thumbnail": "https://i.pinimg.com/564x/97/70/36/9770368c37597b84934fb28d78ba4c9f.jpg"
+  },
+  {
+    "_id": "4",
+    "category": "indumentaria",
+    "title": "Vestido renacentista de terciopelo verde",
+    "price": 22100,
+    "description": "Disfraz renacentista de Parlsdy para mujer, vestido irlandés de terciopelo, disfraz de bruja medieval, disfraz de feria victoriana",
+    "stock": 1,
+    "thumbnail": "https://m.media-amazon.com/images/I/819aemjqI4S._AC_UL1500_.jpg"
+  },
+  {
+    "_id": "5",
+    "category": "libros",
+    "title": "El temor de un hombre sabio",
+    "price": 5975,
+    "description": "Autor: Rothfuss, Patrick. Editorial: Debolsillo, 2013.ISBN: 9788499899619",
+    "stock": 3,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_619072-MLA50586754521_072022-F.webp"
   }
 ]
